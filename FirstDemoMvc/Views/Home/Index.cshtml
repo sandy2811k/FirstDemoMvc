@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to ASP.NET core 6 using MVC</h1>
+</div>
+
+<br />
+<h3> 
+    @ViewData["message"]
+</h3>
+
+@if (ViewData["list"] != null)
+{
+    <ol>
+        @foreach (string str in (IEnumerable<string> )ViewData["list"])
+    {
+        <li>@str</li>
+    }
+    </ol>
+}
+
+<h3>
+    @ViewData["message2"]
+</h3>
+
+@if (ViewData["list2"] != null)
+{
+    <ol>
+        @foreach (string str in (IEnumerable<string>)ViewData["list2"])
+        {
+            <li>@str</li>
+        }
+    </ol>
+}
+
+@* ViewBag *@
+<p>@ViewBag.Month,@ViewBag.year</p>
+
+    <ol>
+        @foreach (string str in ViewBag.names)
+        {
+            <li>@str</li>
+        }
+    </ol>
+
+    @* TempData *@
+
+    <address>
+        @TempData["Company"]
+    </address>

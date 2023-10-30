@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "DisplayDetails";
+}
+
+<h1>Display Details</h1>
+<table class="table">
+    <tr>
+        <td>Your Name</td>
+        <td>
+            @ViewBag.Name
+        </td>
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td>
+            @ViewBag.Gender
+        </td>
+    </tr>
+    <tr>
+        <td>City</td>
+        <td>
+            @ViewBag.City
+        </td>
+    </tr>
+    <tr>
+        <td>Selected Hobbies</td>
+        <td>
+            @foreach (string s in ViewBag.Hobbies)
+            {
+                <p>@s</p>
+            }
+        </td>
+    </tr>
+</table>
+
+
